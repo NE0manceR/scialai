@@ -42,7 +42,10 @@ let kitchen_img = $('.kitchen__img-position');
 
 window.addEventListener('scroll', function () {
   header.addClass('small');
-  kitchen_img.addClass('active')
+
+  if (this.window.innerWidth > 1100) {
+    kitchen_img.addClass('active')
+  }
 
   if (window.scrollY === 0) {
     header.removeClass('small');
