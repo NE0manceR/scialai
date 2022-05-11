@@ -1,0 +1,172 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: 0.3s;
+
+  @media (max-width: 850px) {
+    padding: 0 32px
+  }
+
+  @media (max-width: 650px) {
+    padding: 0 16px
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+
+    @media (max-width: 680px) {
+      padding-top: 16px;
+      align-items: flex-end;
+    }
+  }
+
+  &__mobile-btn {
+    display: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    @media (max-width: 680px) {
+      display: block;
+    }
+
+    &.disactive {
+      opacity: 0;
+    }
+  }
+
+  &.small {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    .header__container {
+      padding-top: 6px;
+    }
+
+    .nav__link {
+      padding: 20px 0 20px;
+    }
+
+    .nav__logo {
+      height: 40px;
+      width: 140px;
+    }
+  }
+}
+
+.nav {
+
+  @media (max-width: 680px) {
+    display: none;
+  }
+
+  &__link-wrap {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+  }
+
+  &__logo {
+    height: 70px;
+    width: 170px;
+    object-fit: contain;
+    transition: 0.3s;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding: 30px 0 30px;
+    color: white;
+    font-weight: 900;
+    transition: 0.3s;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      content: "";
+      width: 0;
+      left: 50%;
+      height: 4px;
+      background-color: white;
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      left: 0;
+      width: 100%
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.91);
+  z-index: 4;
+
+  &__close {
+    position: absolute;
+    top: 35px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 70px;
+  height: 100%;
+  width: 50%;
+
+  &____link-wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link-animation {
+    transform: translateX(200%);
+    animation: showLink 0.2s forwards;
+  }
+
+  &__link-animation:nth-child(2) {
+    animation: showLink 0.2s forwards 0.5s;
+  }
+
+  &__link-animation:nth-child(3) {
+    animation: showLink 0.2s forwards 0.3s;
+  }
+
+  &__link-animation:nth-child(4) {
+    animation: showLink 0.2s forwards 0.1s;
+  }
+
+  @keyframes showLink {
+
+    0% {}
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
