@@ -12,6 +12,10 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
 });
 
 // ============ show mobile=menu
@@ -34,13 +38,15 @@ function toggle_menu() {
 // ============ fix header on scroll
 
 let header = $('.header');
-let header_position = window.scrollY;
+let kitchen_img = $('.kitchen__img-position');
 
 window.addEventListener('scroll', function () {
   header.addClass('small');
+  kitchen_img.addClass('active')
 
   if (window.scrollY === 0) {
     header.removeClass('small');
+    kitchen_img.removeClass('active');
   }
 })
 
