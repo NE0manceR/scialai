@@ -63,6 +63,10 @@
     color: white;
     z-index: 2;
 
+    &.active {
+      transform: translateY(-50px);
+    }
+
     @media (max-width: 1500px) {
       padding-left: 40px;
     }
@@ -76,6 +80,10 @@
     font-size: 46px;
     margin-bottom: 60px;
     color: white;
+
+    @media (max-width: 1366px) {
+      margin-bottom: 12px;
+    }
 
     @media (max-width: 600px) {
       margin-bottom: 30px;
@@ -192,6 +200,7 @@
   }
 
   &__text-block {
+    position: relative;
     display: flex;
     gap: 120px;
     height: max-content;
@@ -208,15 +217,24 @@
   }
 
   &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 420px;
     height: 100%;
     object-fit: cover;
 
-    @media (max-width: 1200px) {
+
+    &-right {
+      left: auto;
+      right: 0;
+    }
+
+    @media (max-width: 1570px) {
       width: 220px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1150px) {
       display: none;
     }
   }
@@ -227,6 +245,11 @@
   flex-direction: column;
   align-items: center;
   flex-basis: 620px;
+  margin: 0 auto;
+
+  &__btn-wrap {
+    padding-top: 40px;
+  }
 
 
   &__img {
@@ -277,5 +300,69 @@
 
   &__description {
     color: #555555;
+  }
+}
+
+.call-us {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 56px;
+  color: white;
+
+  @media (max-width: 1010px) {
+    font-size: 36px;
+    padding: 0 32px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 0 16px;
+    font-size: 32px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 12px;
+
+  }
+
+  &__phone {
+    position: relative;
+    font-weight: 900;
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+
+    @media (max-width: 500px) {
+      font-size: 24px;
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: 0.3s;
+    }
+
+    &:hover:after {
+      width: 100%;
+      left: 0;
+    }
   }
 }

@@ -39,17 +39,20 @@ function toggle_menu() {
 
 let header = $('.header');
 let kitchen_img = $('.kitchen__img-position');
+let kitchen_block = $('.kitchen__text')
 
 window.addEventListener('scroll', function () {
   header.addClass('small');
 
   if (this.window.innerWidth > 1100) {
-    kitchen_img.addClass('active')
+    kitchen_img.addClass('active');
+    kitchen_block.addClass('active');
   }
 
   if (window.scrollY === 0) {
     header.removeClass('small');
     kitchen_img.removeClass('active');
+    kitchen_block.removeClass('active');
   }
 })
 
