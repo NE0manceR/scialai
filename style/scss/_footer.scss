@@ -93,6 +93,10 @@
     color: #744e3b;
     font-weight: 900;
     margin-bottom: 50px;
+
+    @media (max-width: 750px) {
+      margin-bottom: 8px;
+    }
   }
 
   &__phone,

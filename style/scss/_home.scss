@@ -169,7 +169,7 @@
       z-index: -1;
     }
 
-    &:hover:active::after {
+    &:active::after {
       left: 50%;
       width: 0;
       z-index: -1;
@@ -290,6 +290,11 @@
 
     &:nth-child(3) {
       border-top: 1px solid #e6e6e6;
+    }
+
+    @media (max-width: 750px) {
+      padding: 16px 0;
+
     }
   }
 
