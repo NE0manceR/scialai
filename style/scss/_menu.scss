@@ -1,0 +1,26 @@
+.menu {
+  background-color:#f6f6f6;
+  
+  &__container {
+    padding: 100px 100px;
+  }
+
+
+  &__text {
+    display: block;
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 70px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn-position {
+    display: block;
+    margin: 0 auto;
+  }
+}

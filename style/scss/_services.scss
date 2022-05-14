@@ -1,0 +1,39 @@
+.service {
+
+  background-color: #f6f6f6;
+  padding-bottom: 100px;
+
+  &__icon-container {
+
+    display: flex;
+    gap: 120px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (max-width: 700px) {
+      gap: 40px;
+    }
+  }
+
+  &__icon {
+    height: 60px;
+    width: 90px;
+    object-fit: contain;
+    margin-bottom: 30px;
+  }
+
+  &__icon-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: max-content;
+  }
+
+  &__icon-title {
+    color: #744e3b;
+    font-weight: 900;
+  }
+}

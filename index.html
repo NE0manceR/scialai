@@ -34,7 +34,7 @@
     </div>
   </header>
   <section class="main">
-    <div class="main__filter"></div>
+    <div class="header__filter"></div>
     <div class="mobile-menu">
       <img class="mobile-menu__close" src="images/icons/ic_close.svg" alt="close">
       <nav class="mobile__menu-nav mobile-nav">
@@ -72,26 +72,28 @@
       <div class="swiper-button-prev"></div>
     </div>
   </section>
-  <section class="kitchen">
-    <div class="kitchen__text">
-      <div class="kitchen__text-wrap">
-        <h3 class="kitchen__title">Cucina tipica pugliese con un tocco di modernità</h3>
-        <span class="kitchen__description">
+
+  <section class="info">
+    <div class="info__text">
+      <div class="info__text-wrap">
+        <h3 class="info__title">Cucina tipica pugliese con un tocco di modernità</h3>
+        <span class="info__description">
           Proponiamo specialità di pesce della cucina mediterranea con crostacei e sfiziosità tipiche salentine in un
           ambiente curato e accogliente.
 
           Selezioniamo le materie prime migliori nel rispetto della stagionalità e del territorio.
         </span>
-        <button class="kitchen__btn">scopri di più</button>
+        <button class="btn-white">scopri di più</button>
       </div>
     </div>
-    <img class="kitchen__img kitchen__img-position" src="images/kitche-bcg-1.webp" alt="img">
-    <img class="kitchen__img" src="images/kitche-bcg-2.webp" alt="img">
+    <img class="info__img kitchen__img-position" src="images/kitche-bcg-1.webp" alt="img">
+    <img class="info__img" src="images/kitche-bcg-2.webp" alt="img">
   </section>
-  <h3 class="price-title">
-    Una selezione <br> dal nostro menu di terra per te
-  </h3>
+
   <section class="price">
+    <h3 class="section-title">
+      Una selezione <br> dal nostro menu di terra per te
+    </h3>
 
     <div class="price__text-block">
       <img class="price__img" src="images/price-bcg-1.webp" alt="img">
@@ -131,7 +133,7 @@
           <span class="price-menu__dish">Tagliere di salumi e formaggi per 2 persone<span>€18</span></span>
         </div>
         <div class="price-menu__btn-wrap">
-          <button class="btn-brown">guarda il menu completo</button>
+          <button class="btn-white">guarda il menu completo</button>
         </div>
       </div>
     </div>
@@ -155,6 +157,12 @@
         <span class="footer__street">Via Mariana Albina, 94 73011 Alezio (LE) - Puglia</span>
         <a class="footer__mail" href="mailto:info@scialaitrattoria.it">info@scialaitrattoria.it</a>
         <a class="footer__phone" href="tel:+39 392 052 6370">+39 392 052 6370</a>
+        <div class="social social-wrap footer__social">
+          <a href=""><img class="social__icon" src="images/social-icon/1.png" alt="icon"></a>
+          <a href=""><img class="social__icon" src="images/social-icon/2.png" alt="icon"></a>
+          <a href=""><img class="social__icon" src="images/social-icon/3.png" alt="icon"></a>
+          <a href=""><img class="social__icon" src="images/social-icon/4.png" alt="icon"></a>
+        </div>
       </div>
 
       <div class="footer__block">
@@ -175,12 +183,30 @@
         <span>Made with &#10084;&#65039 by Consolidati</span>
       </div>
     </div>
-
-
   </footer>
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+    });
+
+  </script>
   <script src="js/script.js"></script>
 
 </body>
